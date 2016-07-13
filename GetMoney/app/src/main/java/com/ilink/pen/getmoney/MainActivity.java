@@ -44,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
         cbNo2 = (CheckBox) findViewById(R.id.cbNo2);
         cbNo3 = (CheckBox) findViewById(R.id.cbNo3);
 
+        btnSwitch = (Button) findViewById(R.id.btnSwitch);
+
 //绑定一个btn监听器用来监听btnGetMoney的点击事件
 
         btnGetMoney.setOnClickListener(new View.OnClickListener() {
@@ -131,7 +133,9 @@ public class MainActivity extends AppCompatActivity {
         btnSwitch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //跳转到第二个Activity
                 Intent i = new Intent(MainActivity.this,SecondActivity.class);
+                startActivity(i);
             }
         });
     }
