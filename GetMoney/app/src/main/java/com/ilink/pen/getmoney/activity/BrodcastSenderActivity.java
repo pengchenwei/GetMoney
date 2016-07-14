@@ -2,6 +2,7 @@ package com.ilink.pen.getmoney.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -18,6 +19,15 @@ public class BrodcastSenderActivity extends AppCompatActivity {
 
         btnBrodcastSender = (Button) findViewById(R.id.btnBrodcastSender);
         etBrodcastSender = (EditText) findViewById(R.id.etBrodcastSender);
+
+        btnBrodcastSender.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //发送广播
+                String BrodcastStr = etBrodcastSender.getText().toString();
+
+            }
+        });
 
     }
 }
