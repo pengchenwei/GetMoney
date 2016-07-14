@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="#00FFBB"
     android:orientation="vertical"
-    tools:context="com.ilink.pen.getmoney.MainActivity">
+    tools:context=".activity.MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

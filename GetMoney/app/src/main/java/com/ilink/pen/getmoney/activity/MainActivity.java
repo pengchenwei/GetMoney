@@ -1,4 +1,4 @@
-package com.ilink.pen.getmoney;
+package com.ilink.pen.getmoney.activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -11,6 +11,8 @@ import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.ilink.pen.getmoney.R;
 
 public class MainActivity extends AppCompatActivity {
     //建立对象：对应UI布局的控件类型

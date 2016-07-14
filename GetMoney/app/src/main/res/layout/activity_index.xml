@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00FFBB"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnToMain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FF00ff"
+                android:text="跳转到MainActivity" />
+
+            <Button
+                android:id="@+id/btnToSecond"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00FF00"
+                android:text="跳转到SecondActivity" />
+
+            <Button
+                android:id="@+id/btnToActivityLifeCycle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="跳转到ActivityLifeCycle" />
+
+            <Button
+                android:id="@+id/btnToCapture"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="跳转到Capture" />
+
+            <Button
+                android:id="@+id/btnToBrodcastSender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="跳转到BrodcastSender" />
+
+            <Button
+                android:id="@+id/btnToSome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="跳转到..." />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
