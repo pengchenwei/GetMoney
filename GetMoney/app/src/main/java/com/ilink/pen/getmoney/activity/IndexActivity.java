@@ -13,7 +13,8 @@ import com.ilink.pen.getmoney.R;
  * Created by pen on 2016/7/14.
  */
 public class IndexActivity extends AppCompatActivity {
-    private Button btnToMain, btnToSecond,btnToSome,btnToActivityLifeCycle,btnToCapture,btnToBrodcastSender;
+    private Button btnToMain, btnToSecond,btnToSome,btnToActivityLifeCycle,
+            btnToCapture,btnToBrodcastSender,btnToDynamicRegisterBrodcast;
     private BtnListener btnListener;
 
     @Override
@@ -37,6 +38,7 @@ public class IndexActivity extends AppCompatActivity {
         btnToCapture = (Button) findViewById(R.id.btnToCapture);
 
         btnToBrodcastSender = (Button) findViewById(R.id.btnToBrodcastSender);
+        btnToDynamicRegisterBrodcast = (Button) findViewById(R.id.btnToDynamicRegisterBrodcast);
     }
     // 绑定监听器
     private void SetClickListener() {
@@ -48,6 +50,7 @@ public class IndexActivity extends AppCompatActivity {
 
         btnToCapture.setOnClickListener(btnListener);
         btnToBrodcastSender.setOnClickListener(btnListener);
+        btnToDynamicRegisterBrodcast.setOnClickListener(btnListener);
 
     }
 // 内部类来简化btnListener，将FindView中得到的view传入，用switch/case来判断onClick事件
@@ -75,6 +78,10 @@ public class IndexActivity extends AppCompatActivity {
                 case R.id.btnToBrodcastSender:
                     Intent i5 = new Intent(IndexActivity.this, BrodcastSenderActivity.class);
                     startActivity(i5);
+                    break;
+                case R.id.btnToDynamicRegisterBrodcast:
+                    Intent i6 = new Intent(IndexActivity.this, DynamicRegisterBrodcastReceiver.class);
+                    startActivity(i6);
                     break;
                 case R.id.btnToSome:
                     Toast.makeText(IndexActivity.this, "Coming Soon", Toast.LENGTH_SHORT).show();

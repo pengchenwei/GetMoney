@@ -1,5 +1,6 @@
 package com.ilink.pen.getmoney.activity;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -24,8 +25,11 @@ public class BrodcastSenderActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //发送广播
-                String BrodcastStr = etBrodcastSender.getText().toString();
-
+                String brodcastStr = etBrodcastSender.getText().toString();
+                //设置intent的Action的name，与Manifest中intent-filter-->action设置的一致
+                Intent bcIntent = new Intent().setAction("com.iLink.NOTIFY");
+                bcIntent.putExtra("brodcastMsg", brodcastStr);
+                sendBroadcast(bcIntent);
             }
         });
 

@@ -11,6 +11,8 @@ import android.widget.TextView;
 
 import com.ilink.pen.getmoney.R;
 
+import java.util.Locale;
+
 public class DynamicRegisterBrodcastReceiver extends AppCompatActivity {
     private TextView tvBatteryInfo;
     //定义电池Action常量
@@ -52,10 +54,10 @@ public class DynamicRegisterBrodcastReceiver extends AppCompatActivity {
                 int health = intent.getIntExtra("health", 1);
                 boolean present = intent.getBooleanExtra("present", true);
                 int level = intent.getIntExtra("level", 0);
-                int scale = intent.getIntExtra("scale", 0);
+                float scale = intent.getIntExtra("scale", 0);
                 int plugged = intent.getIntExtra("plugged", 0);
-                int voltage = intent.getIntExtra("voltage", 0);
-                int temperature = intent.getIntExtra("temperature", 0);
+                float voltage = intent.getIntExtra("voltage", 0);
+                float temperature = intent.getIntExtra("temperature", 0);
                 String technology = intent.getStringExtra("technology");
 
                 String statusString = "未知状态";
@@ -108,18 +110,18 @@ public class DynamicRegisterBrodcastReceiver extends AppCompatActivity {
                         acString = "USB充电";
                         break;
                 }
-                tvBatteryInfo.setText("电池状态：\n" +
+                String setBInfo = "电池状态：" +
                         "\n是否使用电池：" + String.valueOf(present) +
                         "\n电池状态：" + statusString +
-                        "\n电量：" + String.valueOf(level) + "%" +
+                        "\n电量：" + String.format(Locale.CHINA,"%d", level) + "%" +
                         "\n健康：" + healthString +
-                        "\n最大值：" + String.valueOf(scale) +
+                        "\n最大值：" + String.format(Locale.CHINA,"%f", scale) +
                         "\n充电方式：" + acString +
-                        "\n电压：" + String.valueOf(voltage) +
-                        "\n温度：" + String.valueOf(temperature) +
-                        "\n接通电源：" + String.valueOf(plugged) +
-                        "\n电池类型：" + technology
-                );
+                        "\n电压：" + String.format(Locale.CHINA,"%g", voltage) +
+                        "\n温度：" + String.format(Locale.CHINA,"%g", temperature) +
+                        "\n接通电源：" + String.format(Locale.CHINA,"%d", plugged) +
+                        "\n电池类型：" + technology;
+                tvBatteryInfo.setText(setBInfo);
             }
         }
     };

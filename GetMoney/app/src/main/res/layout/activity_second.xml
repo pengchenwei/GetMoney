@@ -2,14 +2,108 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="6dp"
+    android:background="#00BBFF"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/tvWelcome"
+    <ScrollView
+        android:scrollbars="none"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="欢迎你又迈进一步！"
-        android:textColor="#FF0000"
-        android:textSize="25dp" />
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="#00FFBB"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="评价星级！"
+                    android:textColor="#FF0000"
+                    android:textSize="25dp" />
+
+                <RatingBar
+                    android:id="@+id/rtbStar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:stepSize="0.5" />
+
+                <TextView
+                    android:id="@+id/tvDragResult"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="你的拖动评分是：50"
+                    android:textColor="#FF0000"
+                    android:textSize="25dp" />
+
+                <SeekBar
+                    android:id="@+id/skbDrag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:max="100"
+                    android:progress="50" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:background="#FFFFFF"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:text="等待测试"
+                    android:textSize="20dp" />
+
+                <ImageButton
+                    android:id="@+id/ibWaiting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/waiting" />
+
+                <ProgressBar
+                    android:id="@+id/pbWaiting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="gone" />
+            </LinearLayout>
+  <LinearLayout
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+      <DatePicker
+          android:id="@+id/dpPicker"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"/>
+      <TimePicker
+          android:id="@+id/tpPicker"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"/>
+
+  </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
 </LinearLayout>

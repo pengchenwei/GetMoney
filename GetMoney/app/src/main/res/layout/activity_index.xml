@@ -47,6 +47,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="跳转到BrodcastSender" />
+            <Button
+                android:id="@+id/btnToDynamicRegisterBrodcast"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="跳转到DynamicRegisterBrodcast" />
 
             <Button
                 android:id="@+id/btnToSome"
