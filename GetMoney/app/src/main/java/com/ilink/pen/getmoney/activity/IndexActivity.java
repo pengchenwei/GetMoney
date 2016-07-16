@@ -17,7 +17,7 @@ import com.ilink.pen.getmoney.R;
  */
 public class IndexActivity extends AppCompatActivity {
     private Button btnToMain, btnToSecond, btnToSome, btnToActivityLifeCycle,
-            btnToCapture, btnToBrodcastSender, btnToDynamicRegisterBrodcast;
+            btnToCapture, btnToBrodcastSender, btnToDynamicRegisterBrodcast, btnToBarCodeScanner;
     private BtnListener btnListener;
 
     @Override
@@ -43,6 +43,7 @@ public class IndexActivity extends AppCompatActivity {
 
         btnToBrodcastSender = (Button) findViewById(R.id.btnToBrodcastSender);
         btnToDynamicRegisterBrodcast = (Button) findViewById(R.id.btnToDynamicRegisterBrodcast);
+        btnToBarCodeScanner = (Button) findViewById(R.id.btnToBarCodeScanner);
     }
 
     // 绑定监听器
@@ -56,6 +57,7 @@ public class IndexActivity extends AppCompatActivity {
         btnToCapture.setOnClickListener(btnListener);
         btnToBrodcastSender.setOnClickListener(btnListener);
         btnToDynamicRegisterBrodcast.setOnClickListener(btnListener);
+        btnToBarCodeScanner.setOnClickListener(btnListener);
 
     }
 
@@ -88,6 +90,10 @@ public class IndexActivity extends AppCompatActivity {
                 case R.id.btnToDynamicRegisterBrodcast:
                     Intent i6 = new Intent(IndexActivity.this, DynamicRegisterBrodcastReceiver.class);
                     startActivity(i6);
+                    break;
+                case R.id.btnToBarCodeScanner:
+                    Intent i7 = new Intent(IndexActivity.this, BarCodeActivity.class);
+                    startActivity(i7);
                     break;
                 case R.id.btnToSome:
                     Toast.makeText(IndexActivity.this, "Coming Soon", Toast.LENGTH_SHORT).show();
