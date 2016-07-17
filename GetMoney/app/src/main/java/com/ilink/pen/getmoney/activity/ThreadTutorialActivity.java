@@ -29,6 +29,7 @@ public class ThreadTutorialActivity extends AppCompatActivity implements Runnabl
         @Override
         public void handleMessage(Message msg) {
             if (msg.what == STOP) {
+                //progressDialog是在主线程中的，子线程不能更改主线程的操作
                 progressDialog.dismiss();//关闭进度对话框
                 Toast.makeText(ThreadTutorialActivity.this, "加载完成", Toast.LENGTH_SHORT).show();
             }
@@ -119,7 +120,7 @@ public class ThreadTutorialActivity extends AppCompatActivity implements Runnabl
         }
     }
 
-    //方式三启动线程
+    //方式三启动线程，在本类中实现了Runnable接口中的抽象方法
     @Override
     public void run() {
         try {

@@ -44,7 +44,12 @@
             android:label="@string/title_activity_dynamic_register_brodcast_receiver"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".activity.BarCodeActivity" />
-        <activity android:name=".activity.ThreadTutorialActivity"></activity>
+        <activity android:name=".activity.ThreadTutorialActivity" />
+
+        <service
+            android:name=".service.Service01"
+            android:enabled="true"
+            android:exported="true"></service>
     </application>
 
 </manifest>
