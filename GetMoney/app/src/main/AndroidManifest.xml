@@ -42,8 +42,9 @@
         <activity
             android:name=".activity.DynamicRegisterBrodcastReceiver"
             android:label="@string/title_activity_dynamic_register_brodcast_receiver"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".activity.BarCodeActivity"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activity.BarCodeActivity" />
+        <activity android:name=".activity.ThreadTutorialActivity"></activity>
     </application>
 
 </manifest>
