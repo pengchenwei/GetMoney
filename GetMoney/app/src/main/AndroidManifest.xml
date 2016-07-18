@@ -51,6 +51,7 @@
             android:enabled="true"
             android:exported="true" />
         <service android:name=".service.StartService"/>
+        <service android:name=".service.BindService"/>
 
         <activity android:name=".activity.StartServiceActivity"></activity>
     </application>
