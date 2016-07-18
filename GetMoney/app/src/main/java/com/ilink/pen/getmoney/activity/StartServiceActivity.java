@@ -38,7 +38,8 @@ public class StartServiceActivity extends AppCompatActivity {
         this.findViewById(R.id.btnStartService).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent startSerIntent = new Intent(StartServiceActivity.this, StartService.class);
+                Intent startSerIntent = new Intent(StartServiceActivity.this, BindService.class);
+//                Intent startSerIntent = new Intent(StartServiceActivity.this, StartService.class);
                 startService(startSerIntent);
             }
         });
@@ -46,7 +47,8 @@ public class StartServiceActivity extends AppCompatActivity {
         this.findViewById(R.id.btnStopService).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent stopIntent = new Intent(StartServiceActivity.this, StartService.class);
+                Intent stopIntent = new Intent(StartServiceActivity.this, BindService.class);
+//                Intent stopIntent = new Intent(StartServiceActivity.this, StartService.class);
                 stopService(stopIntent);
             }
         });
