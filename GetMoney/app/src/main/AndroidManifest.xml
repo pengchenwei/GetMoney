@@ -49,7 +49,10 @@
         <service
             android:name=".service.Service01"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true" />
+        <service android:name=".service.StartService"/>
+
+        <activity android:name=".activity.StartServiceActivity"></activity>
     </application>
 
 </manifest>

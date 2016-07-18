@@ -1,5 +1,6 @@
 package com.ilink.pen.getmoney.activity;
 
+import android.app.Service;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -18,7 +19,8 @@ import com.ilink.pen.getmoney.R;
 public class IndexActivity extends AppCompatActivity {
     private Button btnToMain, btnToSecond, btnToSome, btnToActivityLifeCycle,
             btnToCapture, btnToBrodcastSender, btnToDynamicRegisterBrodcast,
-            btnToBarCodeScanner,btnToThreadTutorial;
+            btnToBarCodeScanner,btnToThreadTutorial,btnToStartService;
+
     private BtnListener btnListener;
 
     @Override
@@ -46,6 +48,7 @@ public class IndexActivity extends AppCompatActivity {
         btnToDynamicRegisterBrodcast = (Button) findViewById(R.id.btnToDynamicRegisterBrodcast);
         btnToBarCodeScanner = (Button) findViewById(R.id.btnToBarCodeScanner);
         btnToThreadTutorial = (Button) findViewById(R.id.btnToThreadTutorial);
+        btnToStartService = (Button) findViewById(R.id.btnToStartService);
     }
 
     // 绑定监听器
@@ -61,6 +64,7 @@ public class IndexActivity extends AppCompatActivity {
         btnToDynamicRegisterBrodcast.setOnClickListener(btnListener);
         btnToBarCodeScanner.setOnClickListener(btnListener);
         btnToThreadTutorial.setOnClickListener(btnListener);
+        btnToStartService.setOnClickListener(btnListener);
 
     }
 
@@ -102,6 +106,10 @@ public class IndexActivity extends AppCompatActivity {
                     Intent i8= new Intent(IndexActivity.this, ThreadTutorialActivity.class);
                     startActivity(i8);
                     break;
+                case R.id.btnToStartService:
+                    Intent i9= new Intent(IndexActivity.this, StartServiceActivity.class);
+                    startActivity(i9);
+                    break;
                 case R.id.btnToSome:
                     Toast.makeText(IndexActivity.this, "Coming Soon", Toast.LENGTH_SHORT).show();
                     break;
@@ -111,7 +119,7 @@ public class IndexActivity extends AppCompatActivity {
         }
     }
 
-    private long exitTime = 0;
+    public static long exitTime = 0;
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
