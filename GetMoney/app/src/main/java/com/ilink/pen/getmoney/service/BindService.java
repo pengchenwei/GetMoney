@@ -6,6 +6,8 @@ import android.os.Binder;
 import android.os.IBinder;
 import android.util.Log;
 
+import com.ilink.pen.getmoney.R;
+
 /**
  * Created by pen on 2016/7/18.
  */

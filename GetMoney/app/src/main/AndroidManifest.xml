@@ -15,7 +15,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.IndexActivity">
+        <activity android:name=".activity.MenuActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -55,7 +55,8 @@
         <service android:name=".service.AIDLService" />
 
         <activity android:name=".activity.StartServiceActivity" />
-        <activity android:name=".activity.ForeAndRemoteServiceActivity"></activity>
+        <activity android:name=".activity.ForeAndRemoteServiceActivity" />
+        <!--<activity android:name=".activity.MenuActivity"></activity>-->
     </application>
 
 </manifest>
