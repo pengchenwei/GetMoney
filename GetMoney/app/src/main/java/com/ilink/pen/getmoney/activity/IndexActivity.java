@@ -19,7 +19,7 @@ import com.ilink.pen.getmoney.R;
 public class IndexActivity extends AppCompatActivity {
     private Button btnToMain, btnToSecond, btnToSome, btnToActivityLifeCycle,
             btnToCapture, btnToBrodcastSender, btnToDynamicRegisterBrodcast,
-            btnToBarCodeScanner,btnToThreadTutorial,btnToStartService;
+            btnToBarCodeScanner,btnToThreadTutorial,btnToStartService,btnToForeAndRemote;
 
     private BtnListener btnListener;
 
@@ -49,6 +49,7 @@ public class IndexActivity extends AppCompatActivity {
         btnToBarCodeScanner = (Button) findViewById(R.id.btnToBarCodeScanner);
         btnToThreadTutorial = (Button) findViewById(R.id.btnToThreadTutorial);
         btnToStartService = (Button) findViewById(R.id.btnToStartService);
+        btnToForeAndRemote = (Button) findViewById(R.id.btnToForeAndRemote);
     }
 
     // 绑定监听器
@@ -65,6 +66,7 @@ public class IndexActivity extends AppCompatActivity {
         btnToBarCodeScanner.setOnClickListener(btnListener);
         btnToThreadTutorial.setOnClickListener(btnListener);
         btnToStartService.setOnClickListener(btnListener);
+        btnToForeAndRemote.setOnClickListener(btnListener);
 
     }
 
@@ -109,6 +111,10 @@ public class IndexActivity extends AppCompatActivity {
                 case R.id.btnToStartService:
                     Intent i9= new Intent(IndexActivity.this, StartServiceActivity.class);
                     startActivity(i9);
+                    break;
+                case R.id.btnToForeAndRemote:
+                    Intent i10= new Intent(IndexActivity.this, ForeAndRemoteServiceActivity.class);
+                    startActivity(i10);
                     break;
                 case R.id.btnToSome:
                     Toast.makeText(IndexActivity.this, "Coming Soon", Toast.LENGTH_SHORT).show();

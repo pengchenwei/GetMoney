@@ -50,10 +50,12 @@
             android:name=".service.Service01"
             android:enabled="true"
             android:exported="true" />
-        <service android:name=".service.StartService"/>
-        <service android:name=".service.BindService"/>
+        <service android:name=".service.StartService" />
+        <service android:name=".service.BindService" />
+        <service android:name=".service.AIDLService" />
 
-        <activity android:name=".activity.StartServiceActivity"></activity>
+        <activity android:name=".activity.StartServiceActivity" />
+        <activity android:name=".activity.ForeAndRemoteServiceActivity"></activity>
     </application>
 
 </manifest>
