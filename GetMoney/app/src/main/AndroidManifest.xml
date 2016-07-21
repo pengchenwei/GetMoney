@@ -15,7 +15,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".sharedData.SharedPrefData">
+        <activity android:name=".sharedData.OpenFileShareData">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -60,7 +60,8 @@
         <activity android:name=".activity.IndexActivity" />
         <!-- <activity android:name=".newsDemo.NewsActivity" /> -->
         <activity android:name=".newsDemo.DetailActivity" />
-      <!--  <activity android:name=".sharedData.SharedPrefData"></activity>-->
+        <!-- <activity android:name=".sharedData.SharedPrefData"></activity> -->
+        <!--<activity android:name=".sharedData.OpenFileShareData"></activity>-->
     </application>
 
 </manifest>
